@@ -87,8 +87,7 @@
                $args = array(
                   'post_type' => 'post',
                   'posts_per_page' => 3,
-                  'cat' => $category_id,
-                  'order' => 'DESC'
+                  'cat' => $category_id
                );
 
                $custom_query = new WP_Query($args);
@@ -158,8 +157,7 @@
                $args = array(
                   'post_type' => 'post',
                   'posts_per_page' => 3,
-                  'cat' => $category_id,
-                  'order' => 'DESC'
+                  'cat' => $category_id
                );
 
                $custom_query = new WP_Query($args);
@@ -202,7 +200,7 @@
                         </div>
                      </div>
                   <?php endwhile;
-                  
+
                   // Reset post data after custom query
                   wp_reset_postdata();
                else:
@@ -222,8 +220,7 @@
                $args = array(
                   'post_type' => 'post',
                   'posts_per_page' => 3,
-                  'cat' => $category_id,
-                  'order' => 'DESC'
+                  'cat' => $category_id
                );
 
                $custom_query = new WP_Query($args);
@@ -286,8 +283,8 @@
                $args = array(
                   'post_type' => 'post',
                   'posts_per_page' => 3,
-                  'cat' => $category_id,
-                  'order' => 'DESC'
+                  'cat' => $category_id
+                  
                );
 
                $custom_query = new WP_Query($args);
@@ -351,8 +348,8 @@
                $args = array(
                   'post_type' => 'post',
                   'posts_per_page' => 3,
-                  'cat' => $category_id,
-                  'order' => 'DESC'
+                  'cat' => $category_id
+                  
                );
 
                $custom_query = new WP_Query($args);
@@ -416,8 +413,8 @@
                $args = array(
                   'post_type' => 'post',
                   'posts_per_page' => 3,
-                  'cat' => $category_id,
-                  'order' => 'DESC'
+                  'cat' => $category_id
+                  
                );
 
                $custom_query = new WP_Query($args);

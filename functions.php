@@ -225,14 +225,7 @@ function themename_widgets_init(): void {
 		'before_title'  => '<h3 class="software_apps">',
 		'after_title'   => '</h3>',
 	));	
-	register_sidebar( array(
-		'name'          => __( 'About Us', 'about_us' ),
-		'id'            => 'about_us',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="about_us">',
-		'after_title'   => '</h3>',
-	));
+	
 	register_sidebar( array(
 		'name'          => __( 'Category Breadcrum', 'category_breadcrum' ),
 		'id'            => 'category_breadcrum',
@@ -257,6 +250,7 @@ function themename_widgets_init(): void {
 		'before_title'  => '<h3 class="contact_us_page">',
 		'after_title'   => '</h3>',
 	));
+	
 }
 
 add_action( 'widgets_init', 'themename_widgets_init');
