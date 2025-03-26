@@ -1,30 +1,19 @@
 <?php get_header(); ?>
-
-
-
 <main>
-
-
     <?php if (is_active_sidebar('category_breadcrum')): ?>
         <?php dynamic_sidebar('category_breadcrum'); ?>
     <?php else: ?>
         <!-- Time to add some widgets! -->
         <p>Widgets no visible</p>
     <?php endif; ?>
-
-
     <div class="container">
         <div class="bg-radius-white">
             <div class="row category">
-
                 <?php
-
                 if (have_posts()) {
                     while ( have_posts()) {
                          the_post();
-
                         ?>
-
                         <!-- --------------- INSIDE CODE ----------------------- -->
 
                         <div class="col-lg-3 col-md-6 mb-3">
@@ -58,14 +47,9 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- ------------------------- END HERE ------------------------ -->
-                        
-
                         <?php
                     }
-
-                    
                     //  ================== pagination =========================== 
 
                     // Set the big number for pagination
@@ -91,32 +75,12 @@
 
                     // Output the pagination HTML
                     printf(
-                        '<nav class="navigation pagination" aria-label="Posts"><div class="nav-links">%s</div></nav>',
+                        '<nav class="navigation pagination-flex" aria-label="Posts"><div class="nav-links-flex">%s</div></nav>',
                         $pagination
                     );
-                    
-
-
                 } ?>
 
             </div>
-            <!-- <nav class="navigation pagination-flex" aria-label="Posts">
-                <div class="nav-links-flex">
-                    <a class="next page-numbers" href="#">«</a>
-                    <span aria-current="page" class="page-numbers current">
-                        <span class="meta-nav screen-reader-text"></span>1 </span>
-                    <a class="page-numbers" href="#">
-                        <span class="meta-nav screen-reader-text"></span> 2 </a>
-                    <span class="page-numbers dots">…</span>
-                    <a class="page-numbers" href="#">
-                        <span class="meta-nav screen-reader-text"></span> 17 </a>
-                    <a class="next page-numbers" href="#">»</a>
-                </div>
-            </nav> -->
-
-            
-
-
         </div>
     </div>
     <div id="progress" style="display: none; background: conic-gradient(rgb(243, 127, 39) 0%, rgb(235, 243, 255) 0%);">
@@ -129,8 +93,5 @@
         </span>
     </div>
 </main>
-
-
-
 
 <?php get_footer(); ?>
