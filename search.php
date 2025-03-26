@@ -1,18 +1,11 @@
 <?php get_header(); ?>
-
-
-
 <main>
-
-
     <?php if (is_active_sidebar('category_breadcrum')): ?>
         <?php dynamic_sidebar('category_breadcrum'); ?>
     <?php else: ?>
         <!-- Time to add some widgets! -->
         <p>Widgets no visible</p>
     <?php endif; ?>
-
-
     <div class="container">
         <div class="bg-radius-white">
             <div class="row category">

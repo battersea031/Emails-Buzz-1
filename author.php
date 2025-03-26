@@ -1,9 +1,6 @@
 <!-- == header ========== -->
 <?php get_header(); ?>
-
-
 <!-- === main body ======= -->
-
 <div class="container">
     <div class="row">
         <div class="col-md">
