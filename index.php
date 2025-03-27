@@ -3,16 +3,16 @@
 <main>
 
    <!-- ovelay-part start -->
-   <?php if (is_active_sidebar('achieve_excellence')): ?>
-      <?php dynamic_sidebar('achieve_excellence'); ?>
+   <?php if (is_active_sidebar('main_home_banner')): ?>
+      <?php dynamic_sidebar('main_home_banner'); ?>
    <?php else: ?>
       <!-- Time to add some widgets! -->
       <p>Widgets no visible</p>
    <?php endif; ?>
 
    <!-- ==== top email sopftware        -->
-   <?php if (is_active_sidebar('top_email_software')): ?>
-      <?php dynamic_sidebar('top_email_software'); ?>
+   <?php if (is_active_sidebar('front_software_home_page')): ?>
+      <?php dynamic_sidebar('front_software_home_page'); ?>
    <?php else: ?>
       <!-- Time to add some widgets! -->
       <p>Widgets no visible</p>

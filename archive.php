@@ -52,33 +52,7 @@
                         <?php
                     }
                     //  ================== pagination =========================== 
-
-                    // Set the big number for pagination
-                    $big = 999999999;
-
-                    // Get the current page number (or set it to 1 if it's not available)
-                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-                    // Define the pagination arguments correctly
-                    $args = array(
-                        'paged' => $paged,
-                        'max_num_pages' => $wp_query->max_num_pages, // Ensure this is set
-                    );
-
-                    // Generate the pagination links
-                    $pagination = paginate_links(array(
-                        'format' => 'page/%#%/',
-                        'current' => max(1, $paged), // Make sure the current page is set correctly
-                        'total' => $args['max_num_pages'], // Total number of pages
-                        'prev_text' => __('&laquo;', 'probabs'),
-                        'next_text' => __('&raquo;', 'probabs'),
-                    ));
-
-                    // Output the pagination HTML
-                    printf(
-                        '<nav class="navigation pagination-flex" aria-label="Posts"><div class="nav-links-flex">%s</div></nav>',
-                        $pagination
-                    );
+                    pagination_theme();
                 } ?>
 
             </div>

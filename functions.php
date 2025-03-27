@@ -56,12 +56,12 @@ function setup_theme()
 
 	// adding menu 
 	register_nav_menus(array(
-        'primary_emailsbuzz' => __('Primary Menu Emailsbuzz', 'emailsbuzz'),
-        'pages'  => __('Pages Footer', 'emailsbuzz'),
-        'important_link'  => __('Important link Footer', 'emailsbuzz'),
-        'emailbuzz_tools'  => __('Eamil Buzz Tools Footer', 'emailsbuzz'),
-		
-    ));
+		'primary_emailsbuzz' => __('Primary Menu Emailsbuzz', 'emailsbuzz'),
+		'pages' => __('Pages Footer', 'emailsbuzz'),
+		'important_link' => __('Important link Footer', 'emailsbuzz'),
+		'emailbuzz_tools' => __('Eamil Buzz Tools Footer', 'emailsbuzz'),
+
+	));
 
 
 }
@@ -92,19 +92,19 @@ function mime_types_support($mimes)
 // ============== Enqueue ==================
 
 // == define constant ========
-define('THEME_LAYOUT_URL', get_template_directory_uri().'/assets/css/layout.css');
-define('THEME_STYLE_URL', get_template_directory_uri().'/assets/css/style.css');
-define('THEME_STYLING_URL', get_template_directory_uri().'/assets/css/styling.css');
+define('THEME_LAYOUT_URL', get_template_directory_uri() . '/assets/css/layout.css');
+define('THEME_STYLE_URL', get_template_directory_uri() . '/assets/css/style.css');
+define('THEME_STYLING_URL', get_template_directory_uri() . '/assets/css/styling.css');
 
 // == font family ==
-define('THEME_STYLING_URL_GILROY', get_template_directory_uri().'/assets/font-family/Gilroy-Bold.woff2');
-define('THEME_STYLING_URL_LATIN_500', get_template_directory_uri().'/assets/font-family/poppins-v20-latin-500.woff2');
-define('THEME_STYLING_URL_LATIN_600', get_template_directory_uri().'/assets/font-family/poppins-v20-latin-600.woff2');
-define('THEME_STYLING_URL_LATIN_REGULAR', get_template_directory_uri().'/assets/font-family/poppins-v20-latin-regular.woff2');
+define('THEME_STYLING_URL_GILROY', get_template_directory_uri() . '/assets/font-family/Gilroy-Bold.woff2');
+define('THEME_STYLING_URL_LATIN_500', get_template_directory_uri() . '/assets/font-family/poppins-v20-latin-500.woff2');
+define('THEME_STYLING_URL_LATIN_600', get_template_directory_uri() . '/assets/font-family/poppins-v20-latin-600.woff2');
+define('THEME_STYLING_URL_LATIN_REGULAR', get_template_directory_uri() . '/assets/font-family/poppins-v20-latin-regular.woff2');
 
 
 // SCRIPT HERE
-define('THEME_SCRIPT_URL', get_template_directory_uri().'/assets/js/script.js');
+define('THEME_SCRIPT_URL', get_template_directory_uri() . '/assets/js/script.js');
 
 
 define('BOOTSTRAP_URL', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css');
@@ -113,15 +113,16 @@ define('BOOTSTRAPSCRIPT_URL', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist
 
 
 add_action('wp_enqueue_scripts', 'theme_slug_enqueue_styles');
-function theme_slug_enqueue_styles() {
-    // SCRIPT
-    wp_enqueue_script('bootstrapscript-style', BOOTSTRAPSCRIPT_URL, array(), '5.2.3', 'all');
+function theme_slug_enqueue_styles()
+{
+	// SCRIPT
+	wp_enqueue_script('bootstrapscript-style', BOOTSTRAPSCRIPT_URL, array(), '5.2.3', 'all');
 
 	// Enqueue the script.js
-    wp_enqueue_script('theme-script-url', THEME_SCRIPT_URL, array(), 1.0, 'all');
+	wp_enqueue_script('theme-script-url', THEME_SCRIPT_URL, array(), 1.0, 'all');
 
-    wp_enqueue_style('bootstrap-style', BOOTSTRAP_URL, array(), '5.2.3', 'all');
-    
+	wp_enqueue_style('bootstrap-style', BOOTSTRAP_URL, array(), '5.2.3', 'all');
+
 	// == FONT AWASOME
 	wp_enqueue_style('theme_styling_1', THEME_STYLING_URL_GILROY, array(), 1.0, 'all');
 	wp_enqueue_style('theme_styling_2', THEME_STYLING_URL_LATIN_500, array(), 1.0, 'all');
@@ -129,130 +130,168 @@ function theme_slug_enqueue_styles() {
 	wp_enqueue_style('theme_styling_4', THEME_STYLING_URL_LATIN_REGULAR, array(), 1.0, 'all');
 
 	// Enqueue the styling.css
-    wp_enqueue_style('theme-layout-style', THEME_LAYOUT_URL, array(), 1.0, 'all');
+	wp_enqueue_style('theme-layout-style', THEME_LAYOUT_URL, array(), 1.0, 'all');
 	wp_enqueue_style('theme-style-style', THEME_STYLE_URL, array(), 1.0, 'all');
 	wp_enqueue_style('theme-styling-style', THEME_STYLING_URL, array(), 1.0, 'all');
 
 }
 
 // == adding widgets
-function themename_widgets_init(): void {
-	register_sidebar( array(
-		'name'          => __( 'Achieve Excellence', 'achieve_excellence' ),
-		'id'            => 'achieve_excellence',
+function themename_widgets_init(): void
+{
+	register_sidebar(array(
+		'name' => __('Main Home Banner', 'main_home_banner'),
+		'id' => 'main_home_banner',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="achieve_excellence">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="main_home_banner">',
+		'after_title' => '</h3>',
 	));
-    register_sidebar( array(
-		'name'          => __( 'Top Email Software', 'top_email_software' ),
-		'id'            => 'top_email_software',
+	register_sidebar(array(
+		'name' => __('Front Software Home Page', 'front_software_home_page'),
+		'id' => 'front_software_home_page',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="top_email_software">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="front_software_home_page">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Our Exceptional Email Solutions', 'our_exceptional_email_solutions' ),
-		'id'            => 'our_exceptional_email_solutions',
+	register_sidebar(array(
+		'name' => __('Our Exceptional Email Solutions', 'our_exceptional_email_solutions'),
+		'id' => 'our_exceptional_email_solutions',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="our_exceptional_email_solutions">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="our_exceptional_email_solutions">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Our Exceptional Email Solutions 1', 'our_exceptional_email_solutions_1' ),
-		'id'            => 'our_exceptional_email_solutions_1',
+	register_sidebar(array(
+		'name' => __('Our Exceptional Email Solutions 1', 'our_exceptional_email_solutions_1'),
+		'id' => 'our_exceptional_email_solutions_1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="our_exceptional_email_solutions_1">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="our_exceptional_email_solutions_1">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Our Exceptional Email Solutions 2', 'our_exceptional_email_solutions_2' ),
-		'id'            => 'our_exceptional_email_solutions_2',
+	register_sidebar(array(
+		'name' => __('Our Exceptional Email Solutions 2', 'our_exceptional_email_solutions_2'),
+		'id' => 'our_exceptional_email_solutions_2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="our_exceptional_email_solutions_2">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="our_exceptional_email_solutions_2">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Our Exceptional Email Solutions 3', 'our_exceptional_email_solutions_3' ),
-		'id'            => 'our_exceptional_email_solutions_3',
+	register_sidebar(array(
+		'name' => __('Our Exceptional Email Solutions 3', 'our_exceptional_email_solutions_3'),
+		'id' => 'our_exceptional_email_solutions_3',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="our_exceptional_email_solutions_3">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="our_exceptional_email_solutions_3">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Our Exceptional Email Solutions 4', 'our_exceptional_email_solutions_4' ),
-		'id'            => 'our_exceptional_email_solutions_4',
+	register_sidebar(array(
+		'name' => __('Our Exceptional Email Solutions 4', 'our_exceptional_email_solutions_4'),
+		'id' => 'our_exceptional_email_solutions_4',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="our_exceptional_email_solutions_4">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="our_exceptional_email_solutions_4">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Our Exceptional Email Solutions 5', 'our_exceptional_email_solutions_5' ),
-		'id'            => 'our_exceptional_email_solutions_5',
+	register_sidebar(array(
+		'name' => __('Our Exceptional Email Solutions 5', 'our_exceptional_email_solutions_5'),
+		'id' => 'our_exceptional_email_solutions_5',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="our_exceptional_email_solutions_5">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="our_exceptional_email_solutions_5">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Footer Social Media', 'footer_social_media' ),
-		'id'            => 'footer_social_media',
+	register_sidebar(array(
+		'name' => __('Footer Social Media', 'footer_social_media'),
+		'id' => 'footer_social_media',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="footer_social_media">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="footer_social_media">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( '404 Error Page', '404_error_page' ),
-		'id'            => '404_error_page',
+	register_sidebar(array(
+		'name' => __('404 Error Page', '404_error_page'),
+		'id' => '404_error_page',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="404_error_page">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="404_error_page">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Software Apps', 'software_apps' ),
-		'id'            => 'software_apps',
+	register_sidebar(array(
+		'name' => __('Software Apps', 'software_apps'),
+		'id' => 'software_apps',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="software_apps">',
-		'after_title'   => '</h3>',
-	));	
-	
-	register_sidebar( array(
-		'name'          => __( 'Category Breadcrum', 'category_breadcrum' ),
-		'id'            => 'category_breadcrum',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="category_breadcrum">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="software_apps">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Search Breadcrum', 'search_breadcrum' ),
-		'id'            => 'search_breadcrum',
+
+	register_sidebar(array(
+		'name' => __('Category Breadcrum', 'category_breadcrum'),
+		'id' => 'category_breadcrum',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="search_breadcrum">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="category_breadcrum">',
+		'after_title' => '</h3>',
 	));
-	register_sidebar( array(
-		'name'          => __( 'Contact Us Page', 'contact_us_page' ),
-		'id'            => 'contact_us_page',
+	register_sidebar(array(
+		'name' => __('Search Breadcrum', 'search_breadcrum'),
+		'id' => 'search_breadcrum',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="contact_us_page">',
-		'after_title'   => '</h3>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="search_breadcrum">',
+		'after_title' => '</h3>',
 	));
-	
+	register_sidebar(array(
+		'name' => __('Contact Us Page', 'contact_us_page'),
+		'id' => 'contact_us_page',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="contact_us_page">',
+		'after_title' => '</h3>',
+	));
+
+}
+add_action('widgets_init', 'themename_widgets_init');
+
+// ====================== PAGINATION FUNCTION =====================
+
+function pagination_theme()
+{
+	//  ================== pagination =========================== 
+
+	// Set the big number for pagination
+	$big = 999999999;
+
+	// Get the current page number (or set it to 1 if it's not available)
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+	global $wp_query;
+
+	// Define the pagination arguments correctly
+	$args = array(
+		'paged' => $paged,
+		'max_num_pages' => $wp_query->max_num_pages, // Ensure this is set
+	);
+
+	// Generate the pagination links
+	$pagination = paginate_links(array(
+		'format' => 'page/%#%/',
+		'current' => max(1, $paged), // Make sure the current page is set correctly
+		'total' => $args['max_num_pages'], // Total number of pages
+		'prev_text' => __('&laquo;', 'probabs'),
+		'next_text' => __('&raquo;', 'probabs'),
+	));
+
+	// Output the pagination HTML
+	printf(
+		'<nav class="navigation pagination-flex" aria-label="Posts"><div class="nav-links-flex">%s</div></nav>',
+		$pagination
+	);
 }
 
-add_action( 'widgets_init', 'themename_widgets_init');
+// ============================ END HERE =========================
 
 ?>

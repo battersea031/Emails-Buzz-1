@@ -8,7 +8,7 @@
             if (have_posts()):
 
                 $author_id = get_queried_object_id();
-                print_r($author_id);
+                
                 ?>
 
                 <!-- ============= author info ================== -->
