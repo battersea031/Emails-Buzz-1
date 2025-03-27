@@ -156,35 +156,35 @@ function themename_widgets_init(): void
 		'after_title' => '</h3>',
 	));
 	register_sidebar(array(
-		'name' => __('Our Exceptional Email Solutions', 'our_exceptional_email_solutions'),
-		'id' => 'our_exceptional_email_solutions',
+		'name' => __('Front Home Page Email Solutions ', 'front_home_page_email_solutions'),
+		'id' => 'front_home_page_email_solutions',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="our_exceptional_email_solutions">',
+		'before_title' => '<h3 class="front_home_page_email_solutions">',
 		'after_title' => '</h3>',
 	));
 	register_sidebar(array(
-		'name' => __('Our Exceptional Email Solutions 1', 'our_exceptional_email_solutions_1'),
-		'id' => 'our_exceptional_email_solutions_1',
+		'name' => __('Front Home Page Email Features', 'front_home_page_email_features'),
+		'id' => 'front_home_page_email_features',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="our_exceptional_email_solutions_1">',
+		'before_title' => '<h3 class="front_home_page_email_features">',
 		'after_title' => '</h3>',
 	));
 	register_sidebar(array(
-		'name' => __('Our Exceptional Email Solutions 2', 'our_exceptional_email_solutions_2'),
-		'id' => 'our_exceptional_email_solutions_2',
+		'name' => __('Front Home Page Email Post', 'front_home_page_email_post'),
+		'id' => 'front_home_page_email_post',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="our_exceptional_email_solutions_2">',
+		'before_title' => '<h3 class="front_home_page_email_post">',
 		'after_title' => '</h3>',
 	));
 	register_sidebar(array(
-		'name' => __('Our Exceptional Email Solutions 3', 'our_exceptional_email_solutions_3'),
-		'id' => 'our_exceptional_email_solutions_3',
+		'name' => __('Front Home Page Aboutus and Contactus', 'front_home_page_aboutus_and_contactus'),
+		'id' => 'front_home_page_aboutus_and_contactus',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="our_exceptional_email_solutions_3">',
+		'before_title' => '<h3 class="front_home_page_aboutus_and_contactus">',
 		'after_title' => '</h3>',
 	));
 	register_sidebar(array(

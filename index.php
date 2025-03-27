@@ -20,8 +20,8 @@
 
 
    <!-- ====================== Our Exceptional Email Solutions ================ -->
-   <?php if (is_active_sidebar('our_exceptional_email_solutions')): ?>
-      <?php dynamic_sidebar('our_exceptional_email_solutions'); ?>
+   <?php if (is_active_sidebar('front_home_page_email_solutions')): ?>
+      <?php dynamic_sidebar('front_home_page_email_solutions'); ?>
    <?php else: ?>
       <!-- Time to add some widgets! -->
       <p>Widgets no visible</p>
@@ -30,16 +30,16 @@
 
    <!-- ==========Our Exceptional Email Solutions =================== -->
 
-   <?php if (is_active_sidebar('our_exceptional_email_solutions_1')): ?>
-      <?php dynamic_sidebar('our_exceptional_email_solutions_1'); ?>
+   <?php if (is_active_sidebar('front_home_page_email_features')): ?>
+      <?php dynamic_sidebar('front_home_page_email_features'); ?>
    <?php else: ?>
       <!-- Time to add some widgets! -->
       <p>Widgets no visible</p>
    <?php endif; ?>
 
    <!-- ============= Our Exceptional Email Solutions =========== -->
-   <?php if (is_active_sidebar('our_exceptional_email_solutions_2')): ?>
-      <?php dynamic_sidebar('our_exceptional_email_solutions_2'); ?>
+   <?php if (is_active_sidebar('front_home_page_email_post')): ?>
+      <?php dynamic_sidebar('front_home_page_email_post'); ?>
    <?php else: ?>
       <!-- Time to add some widgets! -->
       <p>Widgets no visible</p>
@@ -47,8 +47,8 @@
 
 
    <!-- ================= Our Exceptional Email Solutions ============== -->
-   <?php if (is_active_sidebar('our_exceptional_email_solutions_3')): ?>
-      <?php dynamic_sidebar('our_exceptional_email_solutions_3'); ?>
+   <?php if (is_active_sidebar('front_home_page_aboutus_and_contactus')): ?>
+      <?php dynamic_sidebar('front_home_page_aboutus_and_contactus'); ?>
    <?php else: ?>
       <!-- Time to add some widgets! -->
       <p>Widgets no visible</p>
