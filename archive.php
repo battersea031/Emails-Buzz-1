@@ -28,7 +28,7 @@
                                         </div>
                                         <div class="site-card-content-flex p-20">
                                             <ul>
-                                                <li><a href="#" class="cat-g"><?php echo esc_html( $categories[0]->name ); ?></a></li>
+                                                <li><a class="cat-g"><?php echo esc_html( $categories[0]->name ); ?></a></li>
                                             </ul>
                                             <a href="<?php the_permalink(); ?>" class="truncate site-title"><?php the_title(); ?> </a></a>
                                             <div class="mt-auto author">
